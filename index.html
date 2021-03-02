@@ -22,13 +22,16 @@
 $(document).ready(function() {
         $("button").click(function() {
             $.get("http://www.devcodecampmusiclibrary.com/api/music", function(data) {
-                $("#result").html(data);
+                $("#result").html.map(data);
+            //    $("#result").map(data);
                 console.log(data);
             });
     });
     $("button").click(function() {
         $("h1").addClass("page-header");
         $("p.hint").addClass("highlight");
+        $("p").css("font-size", "55px");
+        $("button").css({"padding": "30px", "color": "purple", "margin": "30px", "background-color": "pink"});
         });
 
 });
@@ -47,7 +50,20 @@ $(document).ready(function() {
         <button class="trigger">Close Me Man</button>
     </section>
     <div id="result">
-        <h2>THIS STATEMENT IS REPLACED BY CONSOLE LOG OF MUSIC LIBRARY</h2>    
+        <h2>THIS STATEMENT IS REPLACED BY CONSOLE LOG OF MUSIC LIBRARY</h2>
+        <table>
+            <tr>
+                <th>sample1</th>
+                <th>sample2</th>
+                <th>sample3</th>
+                <th>sample4</th>
+                <th>sample5</th>
+
+            </tr>
+            <tr>
+                <td>{data}</td>
+            </tr>
+        </table>
     </div>
     <button type="button">LOAD THE MUSIC!!!</button>
     <h1>Sample Text</h1>
