@@ -22,7 +22,7 @@
 $(document).ready(function() {
         $("button").click(function() {
             $.get("http://www.devcodecampmusiclibrary.com/api/music", function(data) {
-                $("#result").html.map(data);
+                $("#result").html(data);
             //    $("#result").map(data);
                 console.log(data);
             });
@@ -70,6 +70,14 @@ $(document).ready(function() {
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nostrum unde mollitia suscipit ipsa molestias reprehenderit, laboriosam similique dolores id impedit architecto facilis excepturi rerum sit aliquid nam dolore quod?</p>
     <p class="hint"><strong>Tip:</strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, odio cupiditate modi debitis deserunt quisquam, alias ab dolorum adipisci repellendus voluptatum quo minus saepe velit quidem architecto laborum. Ipsam, dolor.</p>
     <button type="button">Add Class</button>
+    <h1>A NICE DEMONSTRATION</h1>
+    <p style="background-color: orange">SAVE TIME</p>
+    <p style="background-color: purple">SAVE TIME</p>
+    <p style="background-color: green">SAVE TIME</p>
+    <p>SAVE TIME</p>
+    <button type="button">Add CSS Styles</button>
+
+
     <script src="js/scripts.js"></script>
 </body>
 </html>
