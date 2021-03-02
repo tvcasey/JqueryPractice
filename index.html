@@ -5,15 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JQUERY PRACTICE</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header{
+            color: red;
+            text-transform: uppercase;
+        }
+        .highlight{
+            background: yellow;
+        }
+        .hint{
+            font-style: italic;
+        }        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+        $("button").click(function() {
+            $.get("http://www.devcodecampmusiclibrary.com/api/music", function(data) {
+                $("#result").html(data);
+                console.log(data);
+            });
+    });
+    $("button").click(function() {
+        $("h1").addClass("page-header");
+        $("p.hint").addClass("highlight");
+        });
 
+});
+
+
+
+
+
+
+
+</script>
 </head>
 <body>
     <button class="trigger">Click Me Open Man</button>
     <section class="overlay">
         <button class="trigger">Close Me Man</button>
     </section>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div id="result">
+        <h2>THIS STATEMENT IS REPLACED BY CONSOLE LOG OF MUSIC LIBRARY</h2>    
+    </div>
+    <button type="button">LOAD THE MUSIC!!!</button>
+    <h1>Sample Text</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nostrum unde mollitia suscipit ipsa molestias reprehenderit, laboriosam similique dolores id impedit architecto facilis excepturi rerum sit aliquid nam dolore quod?</p>
+    <p class="hint"><strong>Tip:</strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, odio cupiditate modi debitis deserunt quisquam, alias ab dolorum adipisci repellendus voluptatum quo minus saepe velit quidem architecto laborum. Ipsam, dolor.</p>
+    <button type="button">Add Class</button>
     <script src="js/scripts.js"></script>
 </body>
 </html>
